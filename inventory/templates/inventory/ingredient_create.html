@@ -1,0 +1,34 @@
+{% extends 'inventory/base.html' %}
+{% load static %}
+
+{% block title %}Django Delights - Add Ingredients{% endblock %}
+
+{% block content %}
+<div class="container mt-5 d-flex justify-content-center align-items-center">
+    <div class="card text-white bg-primary mb-5 mt-4" style="max-width: 20rem;">
+        <div class="card-body">
+          <h4 class="card-title">Add a New Ingredient:</h4>
+            <form method="POST" action="">
+                {% csrf_token %}
+                <fieldset>
+                    <div>
+                        <label for="name" class="form-label mt-4">Ingredient Name:</label>
+                        <input type="text" class="form-control" id="name" name="name" aria-describedby="ingredientHelp" placeholder="Enter Ingredient Name" required>
+                        <small id="ingredientHelp" class="form-text" style="color: rgba(255, 255, 255, 0.8);">Enter unit type first if applicable: ("ounces of Sugar")</small>
+                    </div>
+                    <div>
+                        <label for="quantity_in_stock" class="form-label mt-4">Amount in Stock:</label>
+                        <input type="number" class="form-control" id="quantity_in_stock" name="quantity_in_stock" placeholder="Amount in Stock" autocomplete="off" step="0.01" required>
+                    </div>
+                    <div>
+                        <label for="price_per_unit" class="form-label mt-4">Price per Unit:</label>
+                        <input type="number" class="form-control" id="price_per_unit" name="price_per_unit" placeholder="Price per Unit" autocomplete="off" step="0.01" required>
+                    </div>
+                </fieldset>
+                <div class="d-flex justify-content-center mt-4">
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

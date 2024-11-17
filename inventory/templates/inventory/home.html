@@ -1,0 +1,16 @@
+{% extends 'inventory/base.html' %}
+{% load static %}
+
+{% block title %}Django Delights - Home{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <h1 class="display-4">Welcome to Django Delights!</h1>
+    <p class="lead">A one-stop shop to satisfy all of your cravings!</p>
+    <hr class="my-4">
+    <p>Check out our current stock of fresh ingredients, or view our menu:</p>
+    <a class="btn btn-primary btn-lg mb-3" href="{% url 'ingredient_list' %}" role="button">Current Stock</a>
+    <a class="btn btn-primary btn-lg mb-3" href="{% url 'menu' %}" role="button">Menu</a>
+    <p>View our sales history:</p>
+    <a class="btn btn-primary btn-lg mb-3" href="{% url 'purchase_logs' %}" role="button">Sales History</a>
+{% endblock %}

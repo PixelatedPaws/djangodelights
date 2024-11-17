@@ -1,0 +1,22 @@
+.navbar .navbar-brand {
+    color: #ffffff !important;
+  }
+
+
+  .navbar .nav-link.active {
+    color: #ffffff !important;
+  }
+
+
+  .navbar .nav-link:hover {
+    color: #ffffff !important;
+  }
+
+
+  .navbar .nav-link {
+    color: #dcdcdc !important; 
+  }
+
+  .text-muted {
+    color: rgba(255, 255, 255, 0.8) !important; /* Override default Bootstrap */
+}
